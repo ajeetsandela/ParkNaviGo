@@ -194,15 +194,34 @@ Phone: +1 (330)-554-7176<br>
 Email: info@parknavigo.com<br>
 <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
 
-
-<form action="mailto:parknavigo@gmail.com" method="post">
+<form id="contactForm">
         <input class="w3-input" type="text" placeholder="Name" required name="Name">
         <input class="w3-input" type="text" placeholder="Email" required name="Email">
         <input class="w3-input" type="text" placeholder="Phone Number" required name="Phone">
         <input class="w3-input" type="text" placeholder="Message" required name="Message"><br>
-        <button class="w3-button" type="submit">SEND</button>
+    <button type="button" onclick="composeEmail()">SEND</button>
     </form>
 <br>
+  <script>
+function composeEmail() {
+    const name = encodeURIComponent(document.forms["contactForm"]["Name"].value);
+    const email = encodeURIComponent(document.forms["contactForm"]["Email"].value);
+    const phone = encodeURIComponent(document.forms["contactForm"]["Phone"].value);
+    const message = encodeURIComponent(document.forms["contactForm"]["Message"].value);
+    
+    const subject = "Contact Form Submission from " + name;
+    
+    const mailtoLink = "mailto:recipient@example.com" +
+                      "?subject=" + subject +
+                      "&body=Name=" + name +
+                      "&Email=" + email +
+                      "&Phone=" + phone +
+                      "&Message=" + message;
+    
+    // Open the user's email client with the pre-filled email
+    window.location.href = mailtoLink;
+}
+</script>
 <img src="" class="w3-image" style="width:100%">
 <p class="w3-center w3-padding">Powered by @ParkNaviGo 2023</p>
 </div>
