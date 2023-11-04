@@ -4,28 +4,99 @@
 <title>ParkNaviGo</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Your+Calligraphy+Font">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script src="https://www.w3schools.com/lib/w3.js"></script>
+<style>
+  .w3 {
+    text-align: left;
+    font-family: 'Your Calligraphy Font', cursive;
+  }
+.w3-top {
+            height: 70px; /* Increase the height of the navigation bar */
+            background-color: #000; /* Change the background color to black */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .w3-bar-item {
+            color: #fff; /* Change the text color to white */
+        }
+
+        .w3-logo {
+            flex: 1; /* Allow the logo to expand and center itself */
+            text-align: center;
+        }
+
+        .w3-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .w3-right {
+            display: flex;
+            gap: 20px;
+        }
+ .profile-card {
+            border: 1px solid #ddd;
+            padding: 10px; /* Reduced padding */
+            text-align: center;
+            width: 18%; /* Adjusted width for each card */
+            margin: 1%; /* Added a small margin to separate cards */
+            display: inline-block; /* Ensures all 5 cards are in the same row */
+        }
+
+        .profile-image {
+            width: 80px; /* Smaller profile image */
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .profile-name {
+            font-size: 18px; /* Slightly smaller font size */
+        }
+
+        .profile-title {
+            font-size: 14px; /* Slightly smaller font size */
+            color: #888;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-link {
+            font-size: 18px; /* Slightly smaller font size */
+            margin-right: 8px; /* Reduced margin */
+        }
+
+</style>
 <body>
 
 <!-- Navigation (Stays on Top) -->
-<div class="w3-top w3-bar w3-black">
-<a href="#home" class="w3-bar-item w3-button">Home</a>
-<a href="#about" class="w3-bar-item w3-button">About</a>
-<a href="#members" class="w3-bar-item w3-button">Members</a>
-<a href="#contact" class="w3-bar-item w3-button">Contact</a>
-</div>
+ <!-- Navigation (Stays on Top) -->
+    <div class="w3-top w3-bar">
+        <div class="w3-left">
+            <a href="#home" class="w3-bar-item w3-button">Home</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+        </div>
+        <div class="w3-logo">
+            <img src="./images/logo_banner.jpeg" alt="Logo" width="140" height="68"> <!-- Add your logo here -->
+        </div>
+        <div class="w3-right">
+            <a href="#members" class="w3-bar-item w3-button">Members</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        </div>
+    </div>
 
 <!-- Slides -->
 <!-- Slides -->
-<div class="w3-container">
-    <div class="w3-row">
-        <div class="w3-half" style="text-align: left;">
-            <img src="./logo.jpeg" alt="Company Logo" style="width:100%">
-            <h2 style="color: #000000;">Your Parking Assistant at your fingertips...!!!</h2>
-        </div>
-        
-    </div>
-</div>
+<img src="./images/logo_banner.jpeg" class="w3-image" style="width: 100%; height: auto;">
+<h2 style="color: #000000; text-align: center;">Your Parking Assistant at your fingertips...!!!</h2>
+
 
 
 
@@ -35,74 +106,86 @@
 <p>This is our band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
-<!-- Members -->
-<div id="members" class="w3-container w3-padding-32">
-    <h2 class="w3-center">Meet the Team</h2>
-    <div class="w3-row w3-center">
-        <div class="w3-third">
-            <img src="./Aj.jpg" alt="Name1" style="width:30%">
-            <h3>Founder 1 Name</h3>
-            <p>Founder 1 Title</p>
-            <a href="https://www.linkedin.com/in/linkedin-profile1" target="_blank">
-                <i class="fa fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/instagram-profile1" target="_blank">
-                <i class="fa fa-instagram"></i> Instagram
-            </a>
-        </div>
 
-        <div class="w3-third">
-            <img src="img_bandmember.jpg" alt="Name2" style="width:30%">
-            <h3>Founder 2 Name</h3>
-            <p>Founder 2 Title</p>
-            <a href="https://www.linkedin.com/in/linkedin-profile2" target="_blank">
-                <i class="fa fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/instagram-profile2" target="_blank">
-                <i class="fa fa-instagram"></i> Instagram
-            </a>
-        </div>
+    <!-- Members -->
 
-        <div class="w3-third">
-            <img src="img_bandmember.jpg" alt="Name3" style="width:30%">
-            <h3>Founder 3 Name</h3>
-            <p>Founder 3 Title</p>
-            <a href="https://www.linkedin.com/in/linkedin-profile3" target="_blank">
-                <i class="fa fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/instagram-profile3" target="_blank">
-                <i class="fa fa-instagram"></i> Instagram
-            </a>
-        </div>
-<br><br>
+    <div id="members" class="w3-container w3-padding-32">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 class="w3-center">Meet the Team</h1><br>
+        <div class="w3-row w3-center">
+            <div class="w3-third profile-card">
+                <img src="./images/Aj.jpg" alt="Name1" class="profile-image">
+                <h3 class="profile-name">Ajeet Kumar Sandela</h3>
+                <h4 class="profile-title">Founder</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/linkedin-profile1" target="_blank" class="social-link">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/instagram-profile1" target="_blank" class="social-link">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
 
-<div class="w3-third">
-            <img src="img_bandmember.jpg" alt="Name3" style="width:30%">
-            <h3>Founder 4 Name</h3>
-            <p>Founder 4 Title</p>
-            <a href="https://www.linkedin.com/in/linkedin-profile3" target="_blank">
-                <i class="fa fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/instagram-profile3" target="_blank">
-                <i class="fa fa-instagram"></i> Instagram
-            </a>
-        </div>
+            <div class="w3-third profile-card">
+                <img src="./images/nisha.jpeg" alt="Name3" class="profile-image">
+                <h3 class="profile-name">Nisha Chaurasia</h3>
+                <h4 class="profile-title">Founder</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/linkedin-profile3" target="_blank" class="social-link">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/instagram-profile3" target="_blank" class "social-link">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
 
-<div class="w3-third">
-            <img src="img_bandmember.jpg" alt="Name3" style="width:30%">
-            <h3>Founder 5 Name</h3>
-            <p>Founder 5 Title</p>
-            <a href="https://www.linkedin.com/in/linkedin-profile3" target="_blank">
-                <i class="fa fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/instagram-profile3" target="_blank">
-                <i class="fa fa-instagram"></i> Instagram
-            </a>
+<div class="w3-third profile-card">
+                <img src="./images/shefali.jpeg" alt="Name1" class="profile-image">
+                <h3 class="profile-name">Shefali Gupta</h3>
+                <h4 class="profile-title">Founder</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/linkedin-profile1" target="_blank" class="social-link">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/instagram-profile1" target="_blank" class="social-link">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+<div class="w3-third profile-card">
+                <img src="./images/Aj.jpg" alt="Name1" class="profile-image">
+                <h3 class="profile-name">Ajeet Kumar Sandela</h3>
+                <h4 class="profile-title">Founder</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/linkedin-profile1" target="_blank" class="social-link">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/instagram-profile1" target="_blank" class="social-link">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+<div class="w3-third profile-card">
+                <img src="./images/Aj.jpg" alt="Name1" class="profile-image">
+                <h3 class="profile-name">Ajeet Kumar Sandela</h3>
+                <h4 class="profile-title">Founder</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/linkedin-profile1" target="_blank" class="social-link">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/instagram-profile1" target="_blank" class="social-link">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add similar code for other team members here -->
         </div>
     </div>
-</div>
-
-
 <!-- Contact -->
 <div id="contact" class="w3-container w3-center w3-padding-32">
 <h2 class="w3-wide">CONTACT</h2>
@@ -111,16 +194,17 @@ Phone: +1 (330)-554-7176<br>
 Email: info@parknavigo.com<br>
 <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
 
-<form action="/action_page.php" target="_blank">
-<input class="w3-input" type="text" placeholder="Name" required name="Name">
-<input class="w3-input" type="text" placeholder="Email" required name="Email">
-<input class="w3-input" type="text" placeholder="Message" required name="Message"><br>
-<button class="w3-button w3-black" type="submit">SEND</button>
-</form>
+ <form action="./send_email.php" method="post" target="./thankyou.html">
+        <input class="w3-input" type="text" placeholder="Name" required name="Name">
+        <input class="w3-input" type="text" placeholder="Email" required name="Email">
+        <input class="w3-input" type="text" placeholder="Phone Number" required name="Phone">
+        <input class="w3-input" type="text" placeholder="Message" required name="Message"><br>
+        <button class="w3-button" type="submit">SEND</button>
+    </form>
 
 <br>
-<img src="map.jpg" class="w3-image" style="width:100%">
-<p class="w3-center w3-padding">Powered by @ParkNaviGo</p>
+<img src="" class="w3-image" style="width:100%">
+<p class="w3-center w3-padding">Powered by @ParkNaviGo 2023</p>
 </div>
 
 <!-- End Content -->
