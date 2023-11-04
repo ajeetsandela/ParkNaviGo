@@ -198,6 +198,7 @@ Email: info@parknavigo.com<br>
         <input class="w3-input" type="text" placeholder="Name" required name="Name">
         <input class="w3-input" type="text" placeholder="Email" required name="Email">
         <input class="w3-input" type="text" placeholder="Phone Number" required name="Phone">
+        <input class="w3-input" type="text" placeholder="Location" required name="Location">
         <input class="w3-input" type="text" placeholder="Message" required name="Message"><br>
     <button type="button" onclick="composeEmail()">SEND</button>
     </form>
@@ -208,14 +209,16 @@ function composeEmail() {
     const email = encodeURIComponent(document.forms["contactForm"]["Email"].value);
     const phone = encodeURIComponent(document.forms["contactForm"]["Phone"].value);
     const message = encodeURIComponent(document.forms["contactForm"]["Message"].value);
+    const location = encodeURIComponent(document.forms["contactForm"]["Location"].value);
+
+    const subject = "Business Proposal @ " + name;
     
-    const subject = "Contact Form Submission from " + name;
-    
-    const mailtoLink = "mailto:recipient@example.com" +
+    const mailtoLink = "mailto:parknavigo@gmail.com" +
                       "?subject=" + subject +
                       "&body=Name=" + name +
                       "&Email=" + email +
                       "&Phone=" + phone +
+                      "&Location=" + location +
                       "&Message=" + message;
     
     // Open the user's email client with the pre-filled email
