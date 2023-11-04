@@ -194,13 +194,12 @@ Phone: +1 (330)-554-7176<br>
 Email: info@parknavigo.com<br>
 <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
 
- <form action="https://github.com/ajeetsandela/ParkNaviGo/blob/main/send_email.php" method="post" target="./thankyou.html">
-        <input class="w3-input" type="text" placeholder="Name" required name="Name">
-        <input class="w3-input" type="text" placeholder="Email" required name="Email">
-        <input class="w3-input" type="text" placeholder="Phone Number" required name="Phone">
-        <input class="w3-input" type="text" placeholder="Message" required name="Message"><br>
-        <button class="w3-button" type="submit">SEND</button>
-    </form>
+ <form action="mailto:recipient@example.com" method="post">
+    <input type="text" placeholder="Name" name="Name" required>
+    <input type="text" placeholder="Email" name="Email" required>
+    <input type="text" placeholder="Message" name="Message" required>
+    <button type="submit">SEND</button>
+</form>
 
 <br>
 <img src="" class="w3-image" style="width:100%">
