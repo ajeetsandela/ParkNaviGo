@@ -3,24 +3,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["Name"];
     $email = $_POST["Email"];
     $phone = $_POST["Phone"];
+    $location = $_POST["Location"];
     $message = $_POST["Message"];
     
-    $to = "parknavigo@gmail.com";
-    $subject = "Contact Form Submission from $name";
+    $to = "parknavigo@gmail.com"; // Replace with the recipient's email address
+    $subject = "Business Proposal from $name";
+    
+    $message = "Name: $name\nEmail: $email\nPhone: $phone\nLocation: $location\nMessage: $message";
+    
     $headers = "From: $email";
     
-    // Include the phone number in the email message
-    $message = "Phone: $phone\n\n$message";
+    mail($to, $subject, $message, $headers);
     
-    $emailSent = mail($to, $subject, $message, $headers);
-    
-    if ($emailSent) {
-        // Email sent successfully, then redirect to thank you page
-        header("Location: ./thank_you.html");
-        exit;
-    } else {
-        // Handle the case where the email couldn't be sent, e.g., display an error message
-        echo "Email could not be sent. Please try again later.";
-    }
+    // You can add additional logic here, such as displaying a thank you message or redirecting to a thank you page.
+    // For example:
+     header("./thankyou.html");
+     exit;
 }
 ?>
